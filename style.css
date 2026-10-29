@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f6fb;
+    color: #26344a;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 245px;
+    flex-shrink: 0;
+    background: #172554;
+    padding: 25px 18px;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #dce5f7;
+    padding: 13px 10px;
+    margin-bottom: 7px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.sidebar a:hover {
+    background: #3158b7;
+    color: white;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+}
+
+.main-content h1 {
+    margin-bottom: 25px;
+}
+
+.panel {
+    background: white;
+    padding: 25px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px #1c31510a;
+}
+
+.panel h2 {
+    margin-bottom: 18px;
+}
+
+.panel p {
+    margin-bottom: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 14px 10px;
+    border-bottom: 1px solid #e5eaf2;
+    text-align: left;
+}
+
+th {
+    background: #f1f5fc;
+}
+
+.progress {
+    height: 9px;
+    background: #e5eaf2;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.bar {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.blue {
+    background: #4779ec;
+}
+
+.green-bar {
+    background: #21b879;
+}
+
+.orange {
+    background: #f2a43a;
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.subject-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e5eaf2;
+}
+
+.subject-card h3 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 650px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar a {
+        display: inline-block;
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 9px 5px;
+    }
+}
